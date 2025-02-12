@@ -35,3 +35,17 @@
 .search-list li:last-of-type {
   border-radius: 0px 0px 10px 10px;
 }
+
+@media screen and (min-width: 768px) {
+  .search-list {
+    font-size: x-large;
+  }
+
+  .search-list input {
+    width: 300px;
+  }
+
+  .search-list li {
+    width: 300px;
+  }
+}

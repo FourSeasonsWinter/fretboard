@@ -23,7 +23,7 @@ main {
   justify-content: center;
   border-radius: 50%;
   font-weight: 700;
-  font-size: 3.4vw;
+  font-size: 3.8vw;
 }
 
 .faded-note {
@@ -37,4 +37,22 @@ main {
 .note:nth-child(5),
 .note:nth-child(6) {
   background-color: #444B;
+}
+
+
+@media screen and (min-width: 768px) {
+  .note {
+    width: 4rem;
+    height: 4rem;
+    font-size: large;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .note {
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: large;
+  }
 }
