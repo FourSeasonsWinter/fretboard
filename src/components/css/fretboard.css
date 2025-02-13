@@ -16,8 +16,7 @@ main {
   width: 14vw;
   height: 14vw;
   margin-bottom: 1rem;
-  background-color: transparent;
-  border: 2px solid white;
+  border: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,9 +35,12 @@ main {
 .note:nth-child(4),
 .note:nth-child(5),
 .note:nth-child(6) {
-  background-color: #444B;
+  background-color: #4444;
 }
 
+.rotated {
+  transform: rotate(90deg);
+}
 
 @media screen and (min-width: 768px) {
   .note {

@@ -1,14 +1,14 @@
 const C = { name: ["C", "C"] };
-const Db = { name: ["Db", "C#"] };
+const Db = { name: ["D♭", "C♯"] };
 const D = { name: ["D", "D"] };
-const Eb = { name: ["Eb", "D#"] };
+const Eb = { name: ["E♭", "D♯"] };
 const E = { name: ["E", "E"] };
 const F = { name: ["F", "F"] };
-const Gb = { name: ["Gb", "F#"] };
+const Gb = { name: ["G♭", "F♯"] };
 const G = { name: ["G", "G"] };
-const Ab = { name: ["Ab", "G#"] };
+const Ab = { name: ["A♭", "G♯"] };
 const A = { name: ["A", "A"] };
-const Bb = { name: ["Bb", "A#"] };
+const Bb = { name: ["B♭", "A♯"] };
 const B = { name: ["B", "B"] };
 
 const first = [E, F, Gb, G, Ab, A, Bb, B, C, Db, D, Eb, E];

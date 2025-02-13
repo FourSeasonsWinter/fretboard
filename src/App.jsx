@@ -3,9 +3,12 @@ import SearchList from "./components/SearchList";
 import { getScale } from "./lib/scales";
 import { useState } from "react";
 import "./App.css"
+import Control from "./components/Control";
 
 function App() {
   const [scale, setScale] = useState([]);
+  const [accidental, setAccidental] = useState(0);
+  const [rotated, setRotated] = useState(false);
 
   function handleScaleSelection(scaleName) {
     if (scaleName === "") {
@@ -24,14 +27,23 @@ function App() {
     setScale(scale);
   }
 
+  function handleAccidentalChange() {
+    setAccidental(accidental === 0 ? 1 : 0)
+  }
+  
+  function handleRotation() {
+    setRotated(rotated ? false : true)
+  }
+
   return (
-    <div>
+    <div className="page">
       <SearchList
         onSelect={(scale) => {
           handleScaleSelection(scale);
         }}
       />
-      <Fretboard scale={scale} />
+      <Fretboard scale={scale} accidental={accidental} rotated={rotated} />
+      <Control onAccidentalChange={handleAccidentalChange} onRotate={handleRotation} />
     </div>
   );
 }

@@ -1,0 +1,30 @@
+.control {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: bolder;
+  padding: .4rem 0;
+}
+
+.control button {
+  width: 24vw;
+  height: 12vw;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  opacity: .7;
+  box-shadow: 2px 5px 15px black;
+}
+
+@media screen and (min-width: 768px) {
+  .control {
+    justify-content: center;
+    gap: 8rem;
+  }
+
+  .control button {
+    width: 7rem;
+    height: 3rem;
+  }
+}
