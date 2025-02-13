@@ -3,11 +3,14 @@ import { getNotes, getRepeatedNotes } from "./notes";
 let scales = new Map();
 
 scales.set("major", [2, 2, 1, 2, 2, 2, 1]);
+scales.set("dorian", [2, 1, 2, 2, 2, 1, 2]);
+scales.set("phrygian", [1, 2, 2, 2, 1, 2, 2]);
 scales.set("natural minor", [2, 1, 2, 2, 1, 2, 2]);
 scales.set("harmonic minor", [2, 1, 2, 2, 1, 3, 1]);
 scales.set("melodic minor", [2, 1, 2, 2, 2, 2, 1]);
 scales.set("major pentatonic", [2, 2, 3, 2, 3]);
 scales.set("minor pentatonic", [3, 2, 2, 3, 2]);
+scales.set("blues", [3, 2, 1, 1, 3, 2]);
 
 export function getScale(noteName, type) {
   const notes = getRepeatedNotes();
@@ -19,7 +22,7 @@ export function getScale(noteName, type) {
   for (let i = 0; i < notes.length; ++i) {
     count++;
 
-    if (notes[i].name[0] === noteName) {
+    if (notes[i].name.includes(noteName)) {
       index = count;
       break;
     }
@@ -44,7 +47,7 @@ export function getScaleNames() {
   let names = new Set();
   let scaleNames = new Set();
 
-  for (let [key, value] of scales) {
+  for (let [key, _] of scales) {
     let name = key
       .toLowerCase()
       .split(" ")

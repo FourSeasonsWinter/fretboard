@@ -5,7 +5,7 @@ import "./css/searchlist.css";
 export default function SearchList({ onSelect }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
-  const data = getScaleNames();
+  const scaleNames = getScaleNames();
 
   function handleInputChange(event) {
     const value = event.target.value;
@@ -19,9 +19,10 @@ export default function SearchList({ onSelect }) {
     const filteredResults = [];
     let count = 0;
 
-    data.forEach((element) => {
-      if (count < 5 && element.toLowerCase().startsWith(value.toLowerCase())) {
-        filteredResults.push(element);
+    scaleNames.forEach((scaleName) => {
+      const name = scaleName.replace("♯", "#").replace("♭", "b");
+      if (count < 5 && name.toLowerCase().startsWith(value.toLowerCase())) {
+        filteredResults.push(scaleName);
         count += 1;
       }
     });
