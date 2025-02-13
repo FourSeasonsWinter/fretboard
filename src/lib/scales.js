@@ -6,6 +6,8 @@ scales.set("major", [2, 2, 1, 2, 2, 2, 1]);
 scales.set("natural minor", [2, 1, 2, 2, 1, 2, 2]);
 scales.set("harmonic minor", [2, 1, 2, 2, 1, 3, 1]);
 scales.set("melodic minor", [2, 1, 2, 2, 2, 2, 1]);
+scales.set("major pentatonic", [2, 2, 3, 2, 3]);
+scales.set("minor pentatonic", [3, 2, 2, 3, 2]);
 
 export function getScale(noteName, type) {
   const notes = getRepeatedNotes();
@@ -39,11 +41,23 @@ export function getScale(noteName, type) {
 
 export function getScaleNames() {
   const notes = getNotes();
-  const names = ["Major", "Natural Minor", "Harmonic Minor", "Melodic Minor"];
+  let names = new Set();
   let scaleNames = new Set();
 
+  for (let [key, value] of scales) {
+    let name = key
+      .toLowerCase()
+      .split(" ")
+      .map(function (word) {
+        return word[0].toUpperCase() + word.substr(1);
+      })
+      .join(" ");
+
+    names.add(name);
+  }
+
   notes.map((note) => {
-    names.map((name) => {
+    names.forEach((name) => {
       scaleNames.add(note.name[0] + " " + name);
       scaleNames.add(note.name[1] + " " + name);
     });
