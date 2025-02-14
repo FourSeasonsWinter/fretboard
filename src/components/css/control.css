@@ -2,19 +2,27 @@
   width: 100vw;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  font-weight: bolder;
   padding: .4rem 0;
+  margin-bottom: 2rem;
 }
 
 .control button {
   width: 24vw;
   height: 12vw;
-  background-color: black;
+  background-color: #222;
+  border: 2px solid #111;
   border-radius: 4px;
   color: white;
   opacity: .7;
-  box-shadow: 2px 5px 15px black;
+  box-shadow: 3px 3px 2px black;
+}
+
+.settings-icon {
+  padding: .5rem;
+  border: 2px solid #111;
+  border-radius: 10px;
+  box-shadow: 3px 3px 2px black;
+  background-color: #222;
 }
 
 @media screen and (min-width: 768px) {
