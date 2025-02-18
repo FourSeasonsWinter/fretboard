@@ -15,7 +15,7 @@ main {
   width: 14vw;
   height: 14vw;
   margin-bottom: 1rem;
-  border: 1px solid white;
+  border: 2px solid white;
   display: flex;
   align-items: center;
   justify-content: center;

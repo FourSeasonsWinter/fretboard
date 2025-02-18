@@ -10,18 +10,18 @@
   width: 24vw;
   height: 12vw;
   background-color: #222;
-  border: 2px solid #111;
+  border: 2px solid white;
   border-radius: 4px;
   color: white;
   opacity: .7;
-  box-shadow: 3px 3px 2px black;
+  box-shadow: 3px 3px 2px white;
 }
 
 .settings-icon {
   padding: .5rem;
-  border: 2px solid #111;
+  border: 2px solid white;
   border-radius: 10px;
-  box-shadow: 3px 3px 2px black;
+  box-shadow: 3px 3px 2px white;
   background-color: #222;
 }
 
